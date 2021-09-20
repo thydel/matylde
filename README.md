@@ -70,7 +70,7 @@ thy@tde-ws:~/usr/hub/work/ext/matylde$ make jq
 < dict-with-jq.json jq -r 'to_entries | map([.key] + .value | join(" "))[]' > dict-with-jq.txt
 ```
 
-May require `sudo apt install jq`
+May require `sudo apt install jq` ([jq is a lightweight and flexible command-line JSON processor.][])
 
 [jq is a lightweight and flexible command-line JSON processor.]:
     https://stedolan.github.io/jq/

@@ -27,7 +27,11 @@ thy@tde-ws:~/usr/hub/work/ext/matylde$ make awk
 0inputs+776outputs (0major+217minor)pagefaults 0swaps
 ```
 
-May require `sudo apt install gawk`
+May require `sudo apt install gawk` [The GNU Awk User’s Guide][]
+
+[The GNU Awk User’s Guide]:
+    https://www.gnu.org/software/gawk/manual/gawk.html
+    "www.gnu.org"
 
 # Solution with python, use dict
 
@@ -41,6 +45,12 @@ Still quite fast, at least if the data set can be kept in memory
 0inputs+1000outputs (0major+3994minor)pagefaults 0swaps
 < dict-with-python.json jq -r 'to_entries | map([.key] + .value | join(" "))[]' > dict-with-python.txt
 ```
+
+Use `json` tp output `python` dict ([Introducing JSON][])
+
+[Introducing JSON]:
+    https://www.json.org/json-en.html
+    "json.org"
 
 # Solution with jq, use dict
 
@@ -62,6 +72,10 @@ thy@tde-ws:~/usr/hub/work/ext/matylde$ make jq
 
 May require `sudo apt install jq`
 
+[jq is a lightweight and flexible command-line JSON processor.]:
+    https://stedolan.github.io/jq/
+    "github.io"
+
 # Check that all json and text ouput are similar for all implementation
 
 ```console
@@ -77,3 +91,7 @@ jsondiff dict-with-{jq,python}.json | jq
 ```
 
 May require `sudo apt install python3-jsondiff`
+
+[Local Variables:]::
+[indent-tabs-mode: nil]::
+[End:]::

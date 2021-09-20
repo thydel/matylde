@@ -46,7 +46,7 @@ Still quite fast, at least if the data set can be kept in memory
 < dict-with-python.json jq -r 'to_entries | map([.key] + .value | join(" "))[]' > dict-with-python.txt
 ```
 
-Use `json` tp output `python` dict ([Introducing JSON][])
+Use `json` to output `python` dict ([Introducing JSON][])
 
 [Introducing JSON]:
     https://www.json.org/json-en.html
